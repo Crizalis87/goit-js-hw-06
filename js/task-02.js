@@ -14,5 +14,5 @@ for (let i = 0; i < ingredients.length; i += 1) {
   listItem.textContent = ingredients[i];
   console.log(listItem.textContent);
   list.append(listItem);
-  list.classList.add("item");
+  listItem.classList.add("item");
 }
