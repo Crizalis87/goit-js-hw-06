@@ -1,14 +1,17 @@
 const decrementBtn = document.querySelector('button[data-action="decrement"]');
 const incrementBtn = document.querySelector('button[data-action="increment"]');
-const counterValue = document.querySelector("#value");
-console.log(counterValue);
+const spanValue = document.querySelector("#value");
+
+let counterValue = 0;
 
 const handleClickDec = () => {
-  counterValue.textContent -= 1;
+  counterValue -= 1;
+  spanValue.textContent = counterValue;
 };
 
 const handleClickInc = () => {
-  counterValue.textContent = Number(counterValue.textContent) + 1;
+  counterValue += 1;
+  spanValue.textContent = counterValue;
 };
 
 decrementBtn.addEventListener("click", handleClickDec);
